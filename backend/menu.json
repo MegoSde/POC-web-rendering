@@ -1,0 +1,176 @@
+[
+  {
+    "category": "Specialiteter",
+    "items": [
+      {
+        "title": "Nachos Supreme",
+        "description": "Varme tortillachips med crispy kylling, jalapeños, gratineret med ost, serveres med salsa, guacamole og creme fraiche",
+        "price": "129",
+        "image": "nachos-supreme"
+      },
+      {
+        "title": "Tomatsuppe",
+        "description": "Tomatsuppe med creme fraiche og frisk basilikum. Serveres med brød og smør",
+        "price": "99",
+        "image": "tomatsuppe"
+      }
+    ],
+    "icon": "specialiteter"
+  },
+  {
+    "category": "Salat",
+    "items": [
+      {
+        "title": "Cæsar Salat",
+        "description": "Stegt kyllingebryst, hjertesalat vendt med cæsardressing, parmesanflager og croutoner.",
+        "price": "139",
+        "image": "cæsar-salat"
+      },
+      {
+        "title": "Tigerrejesalat",
+        "description": "Stegte tigerrejer med kålsalat, avocado, nudler, agurk, gulerod, edamame bønner, mynte, cashewnødder og gomadressing",
+        "price": "139",
+        "image": "tigerrejesalat"
+      },
+      {
+        "title": "Vegetar Salat",
+        "description": "Sweet potato, falafel, babyspinat, granatæble, bulgur, feta, tomater, edamame bønner, hjemmelavet basilikumpesto, græskarkerner og mynte",
+        "price": "119",
+        "image": "vegetar-salat"
+      }
+    ],
+    "icon": "salat"
+  },
+  {
+    "category": "Sandwich",
+    "items": [
+      {
+        "title": "Club Sandwich",
+        "description": "Stegt kyllingebryst, sprød bacon, karrymayonnaise, tomat og salat. Serveres med pommes frites og mayonnaise",
+        "price": "139",
+        "image": "club-sandwich"
+      },
+      {
+        "title": "Laksesandwich",
+        "description": "Sandwich med røget laks, hjemmelavet basilikumspesto, salat, avocado og syltet rødløg. Serveres med pommes frites og mayonnaise",
+        "price": "149",
+        "image": "laksesandwich"
+      },
+      {
+        "title": "Spicy Steak Sandwich",
+        "description": "Sandwich med oksestrimler, salat, guacamole, jalapeños, syltede rødløg og spicy chilimayonnaise. Serveres med pommes frites og chilimayonnaise.",
+        "price": "149",
+        "image": "spicy-steak-sandwich"
+      },
+      {
+        "title": "Tunsandwich",
+        "description": "Sandwich med tunmoussé, salat, avocado, syltede rødløg og hjemmelavet basilikumpesto. Serveres med pommes frites og mayonnaise.",
+        "price": "139",
+        "image": "tunsandwich"
+      }
+    ],
+    "icon": "sandwich"
+  },
+  {
+    "category": "Burger",
+    "items": [
+      {
+        "title": "Vesuvius Burger",
+        "description": "Bøf af hakket oksekød i briochebolle med salat, pickles, tomat, syltede rødløg og burgerdressing. Serveres med pommes frites og mayonnaise.",
+        "price": "139",
+        "image": "vesuvius-burger"
+      },
+      {
+        "title": "Spicy Burger",
+        "description": "Bøf af hakket oksekød i briochebolle med salat, tomat, jalapeños, syltede rødløg og chilimayonnaise. Serveres med pommes frites og chilimayonnaise",
+        "price": "149",
+        "image": "spicy-burger"
+      },
+      {
+        "title": "Crispy Chicken Burger",
+        "description": "Sprød kylling i briochebolle med salat, tomat, syltede rødløg, chilimayonnaise, jalapeños og guacamole. Serveres med pommes frites og mayonnaise",
+        "price": "139",
+        "image": "crispy-chicken-burger"
+      }
+    ],
+    "icon": "burger"
+  },
+  {
+    "category": "Pasta",
+    "items": [
+      {
+        "title": "Pasta med Kylling",
+        "description": "Pasta med kylling, blandede svampe og parmesan.",
+        "price": "169",
+        "image": "pasta-med-kylling"
+      },
+      {
+        "title": "Pasta med Oksemørbrad",
+        "description": "Pasta med grilllet oksemørbrad, blandede svampe og parmesan.",
+        "price": "179",
+        "image": "pasta-med-oksemoerbrad"
+      },
+      {
+        "title": "Pasta med Tigerrejer",
+        "description": "Pasta med tigerrejer, tomatsauce, parmesan og basilikum",
+        "price": "179",
+        "image": "pasta-med-tigerrejer"
+      }
+    ],
+    "icon": "pasta"
+  },
+  {
+    "category": "Drinks kort",
+    "items": [
+      {
+        "title": "Aperol Spritz",
+        "description": "Aperol, prosecco, danskvand, appelsinskive. Klassiskeren til en varm sommerdag. Eller bare fordi...",
+        "price": "85",
+        "image": "aperol-spritz"
+      },
+      {
+        "title": "Espresso Martini",
+        "description": "Vodka/tequila, kahlua, espresso, vanilje. En klassiker med et twist, vælg mellem vodka eller tequila.",
+        "price": "85",
+        "image": "espresso-martini"
+      },
+      {
+        "title": "Dark n stormy",
+        "description": "Mørk rom, gingerbeer, friskpresset limesat og gomme sirup.",
+        "price": "85",
+        "image": "dark-n-stormy"
+      },
+      {
+        "title": "Mojito",
+        "description": "Rom, mynte, rørsukker, friskpresset limesaft, limeskiver.",
+        "price": "85",
+        "image": "mojito"
+      },
+      {
+        "title": "Gin Tonic",
+        "description": "Gin, tonic, citronskive.",
+        "price": "85",
+        "image": "gin-tonic"
+      },
+      {
+        "title": "Moscow Mule",
+        "description": "Vodka, friskpresset limesaft, gingerbeer.",
+        "price": "85",
+        "image": "moscow-mule"
+      },
+      {
+        "title": "Strawberry Daquiri",
+        "description": "Lys rom, jordbær, friskpresset lime, gomme sirup.",
+        "price": "85",
+        "image": "strawberry-daquiri"
+      },
+      {
+        "title": "Gin Hass",
+        "description": "Gin, mangojuice, frisk lime og lemon.",
+        "price": "85",
+        "image": "gin-hass"
+      }
+    ],
+    "icon": "drinks-kort"
+  }
+]

@@ -1,0 +1,181 @@
+
+<h1>Cafe Menu</h1>
+<style>
+        {{#each categories}}
+            body:has(#category-{{normalize category}}:not(:checked)) li.category-{{normalize category}} {
+            display: none;
+        }
+        {{/each}}
+
+    details {
+        margin: 20px auto;
+        overflow: hidden;
+    }
+
+    details > div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    details > summary {
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        cursor: pointer;
+        display: flex;
+        font-size: 1.2rem;
+        font-weight: bold;
+        justify-content: space-between;
+        outline: none;
+        padding: 15px 0;
+        position: relative;
+    }
+
+    details > summary h2 {
+        display: inline-block;
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    details > summary::after {
+        content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4wIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTMuOSA1NC45QzEwLjUgNDAuOSAyNC41IDMyIDQwIDMybDQzMiAwYzE1LjUgMCAyOS41IDguOSAzNi4xIDIyLjlzNC42IDMwLjUtNS4yIDQyLjVMMzIwIDMyMC45IDMyMCA0NDhjMCAxMi4xLTYuOCAyMy4yLTE3LjcgMjguNnMtMjMuOCA0LjMtMzMuNS0zbC02NC00OGMtOC4xLTYtMTIuOC0xNS41LTEyLjgtMjUuNmwwLTc5LjFMOSA5Ny4zQy0uNyA4NS40LTIuOCA2OC44IDMuOSA1NC45eiIvPjwvc3ZnPg==');
+        display: inline-block;
+        height: 16px;
+        margin-left: 10px;
+        vertical-align: middle;
+        width: 16px;
+    }
+
+    fieldset {
+        background: #f9f9f9;
+        border: 2px solid gray;
+        border-radius: 8px;
+        box-sizing: border-box;
+        padding: 10px;
+        transition: all 0.3s ease;
+    }
+
+    fieldset input[type="checkbox"] {
+        display: none;
+    }
+
+    fieldset label {
+        border-radius: 8px;
+        color: #333;
+        cursor: pointer;
+        display: block;
+        font-size: 1rem;
+        height: 1.2rem;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    fieldset:has(input[type="checkbox"]:checked) {
+        background: #e6ffe6;
+        border-color: green;
+        color: black;
+    }
+
+    h3 {
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        font-size: 1.2rem;
+        margin: 0;
+        padding: 10px;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    h4 {
+        background: linear-gradient(135deg, #ff7e5f, #feb47b);
+        border-radius: 12px;
+        bottom: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        color: white;
+        display: inline-block;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 0;
+        padding: 5px 15px;
+        position: absolute;
+        right: 10px;
+        text-align: right;
+    }
+
+    img {
+        height: auto;
+        object-fit: contain;
+        width: 100%;
+    }
+
+    li {
+        background: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        position: relative;
+        justify-content: flex-start;
+    }
+
+    p {
+        color: #555;
+        font-size: 1rem;
+        line-height: 1.4;
+        margin: 10px;
+    }
+
+    ul {
+        display: grid;
+        gap: 16px;
+        grid-auto-rows: 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        list-style: none;
+        padding: 0;
+    }
+</style>
+<details>
+    <summary>
+        <h2>Filter</h2>
+    </summary>
+    <div>
+    {{#each categories}}
+    <fieldset>
+        <input type="checkbox" id="category-{{normalize category}}" name="{{category}}" value="{{category}}" checked>
+        <label for="category-{{normalize category}}">{{category}}</label>
+    </fieldset>
+    {{/each}}
+    </div>
+</details>
+
+{{!-- Reset the global index at the start --}}
+{{resetIndex}}
+
+<ul>
+    {{#each categories}}
+        {{#each items}}
+            <li class="category-{{normalize ../category}}">
+                <h3>{{title}}</h3>
+                <img
+                        src="/{{../../imgdir}}/{{image}}.{{../../imgext}}"
+                        alt="{{title}}"
+                        width="300"
+                        height="300"
+                    {{#if @root.isMobile}}
+                        {{#if (gt (incrementIndex) 3)}}loading="lazy"{{/if}}
+                    {{/if}}
+                >
+                <p>{{description}}</p>
+                <h4>{{price}},-</h4>
+            </li>
+        {{/each}}
+    {{/each}}
+</ul>
